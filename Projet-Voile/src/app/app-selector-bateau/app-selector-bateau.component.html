@@ -1,1 +1,48 @@
-<p>app-selector-bateau works!</p>
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  <body class="bg-light">
+    
+<div class="container">
+    <div class="row g-5">
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Modèle de bateau</h4>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Modèle</label>
+              <input type="select" class="form-control" (keyup) = "getData($event);" id="BoatModel" placeholder="" value="" required>
+              <div *ngFor = "let bateau of tableauBateau">
+                {{bateau.name}}
+                {{bateau.ref}}
+              </div>
+              <div class="invalid-feedback">
+                le modèle du bateau est requis.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Longueur (en mètre)</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="BoatLength" placeholder="" value="" required>
+                <span class="input-group-text">mètres</span>
+            </div>
+              <div class="invalid-feedback">
+                La longueur est requise.
+              </div>
+            </div>
+            <hr class="my-4">
+            <div class="col-3">
+            
+
