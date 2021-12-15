@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppSelectorBateauComponent } from './app-selector-bateau/app-selector-bateau.component';
 import { AppSailsMesureComponent } from './app-sails-mesure/app-sails-mesure.component';
 import { AppSailsListComponent } from './app-sails-list/app-sails-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AppSailsListComponent } from './app-sails-list/app-sails-list.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
