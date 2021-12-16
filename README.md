@@ -10,6 +10,10 @@ Il a pour but d 'afficher les prix des voiles selon un modèle de bateau choisi 
 -	Node : 16.13.0
 -	Un navigateur compatible avec Angular (https://angular.io/guide/browser-support)
 
+# Les besoins du client
+
+Le site doit permettre au client de rentré un bateau avec les différentes mesures qu'il souhaite pour trouver les voiles correspondant à son bateau et afficher le prix et la description des différentes voiles.
+
 ## Les fonctionnalitées : 
 
 Le site pour l'instant permet la récupération de la liste des bateaux et l'affichage des tailles, la vérification des mesures est fonctionnel ainsi que l'appel à l'api pour la récupération des prix et description des voiles disponibles.  
@@ -53,4 +57,4 @@ La mise en place des différentes données dans les inputs du site que j'ai plac
 
 # Reste à faire : 
 
-Dans le console log j'arrive à récupérer les informations sur les voiles disponibles pour le bateau choisie, mais je n'arrive pas encore à les affichers mais je voit la solution il faut que j'utilise le type des bateaux pour les séparaient et les mettres dans des listes.
+Dans le console log j'arrive à récupérer les informations sur les voiles disponibles pour le bateau choisie, mais je n'arrive pas encore à les affichers mais je voit la solution il faut que j'utilise le type des bateaux pour les séparaient et les mettres dans des listes. Donc la seul fonctionnalité qui ne fonctionne pas et l'affichage des voiles et leurs prix et descriptions.
