@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { AppSelectorBateauComponent } from './app-selector-bateau/app-selector-bateau.component';
 import { AppSailsMesureComponent } from './app-sails-mesure/app-sails-mesure.component';
 import { AppSailsListComponent } from './app-sails-list/app-sails-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule   } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

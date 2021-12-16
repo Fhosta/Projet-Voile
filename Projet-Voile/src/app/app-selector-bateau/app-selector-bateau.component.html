@@ -20,6 +20,7 @@
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Modèle de bateau</h4>
           <div class="row g-3">
+            <form class="row g-3" [formGroup] = "form" (ngSubmit)="Verification()">
             <div class="col-sm-6">
               <label for="firstName" class="form-label">Modèle</label>
               <input type="select" class="form-control" list="bateaux"  (keyup) = "getData($event)"  id="BoatModel" placeholder="" value="" required>
@@ -48,17 +49,17 @@
               <h5>Les grands-voiles</h5>
                 <label for="gvl" class="form-label">grand-voile lattée</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="gvl"  value={{mesuregvl}} placeholder="" >
+                  <input type="text" class="form-control" id="gvl"  value={{mesuregvl}} placeholder="" formControlName = "gvl">
                   <span class="input-group-text">m2</span>
                 </div>
                 <label for="gvsl" class="form-label">grand-voile semi-lattée</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="gvsl" value={{mesuregvsl}} placeholder="" >
+                  <input type="text" class="form-control" id="gvsl" value={{mesuregvsl}} placeholder="" formControlName = "gvsl">
                   <span class="input-group-text">m2</span>
                 </div>
                 <label for="gve" class="form-label">grand-voile sur enrouleur</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="gve" value={{mesuregve}} placeholder="" >
+                  <input type="text" class="form-control" id="gve" value={{mesuregve}} placeholder="" formControlName = "gve">
                   <span class="input-group-text">m2</span>
                 </div>
               </div>
@@ -66,12 +67,12 @@
               <h5>Les voiles d'avant</h5>
                 <label for="gm" class="form-label">génois sur mousquetons</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="gm" value={{mesuregm}} placeholder="" >
+                  <input type="text" class="form-control" id="gm" value={{mesuregm}} placeholder="" formControlName = "gm">
                   <span class="input-group-text">m2</span>
                 </div>
                 <label for="gve" class="form-label">génois sur enrouleur</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="gve" value={{mesurege}} placeholder="" >
+                  <input type="text" class="form-control" id="gve" value={{mesurege}} placeholder="" formControlName = "gver">
                   <span class="input-group-text">m2</span>
                 </div>
               </div>
@@ -79,17 +80,17 @@
               <h5>Les voiles de portant</h5>
                 <label for="ss" class="form-label">spi symétrique</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="ss" value={{mesuress}} placeholder="" >
+                  <input type="text" class="form-control" id="ss" value={{mesuress}} placeholder="" formControlName = "ss">
                   <span class="input-group-text">m2</span>
                 </div>
                 <label for="sa" class="form-label">spi asymétrique</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="sa" value= {{mesuresa}} placeholder="" >
+                  <input type="text" class="form-control" id="sa" value= {{mesuresa}} placeholder="" formControlName = "sa">
                   <span class="input-group-text">m2</span>
                 </div>
                 <label for="gs" class="form-label">gennaker / code 0</label>
                 <div class="input-group">
-                  <input type="text" class="form-control" id="gs" value= {{mesuregs}} placeholder="" >
+                  <input type="text" class="form-control" id="gs" value= {{mesuregs}} placeholder="" formControlName = "gs">
                   <span class="input-group-text">m2</span>
                 </div>
               </div>
@@ -104,6 +105,7 @@
               <div class="col-md-12 text-center">
                   <button class="btn btn-sm btn-warning ">valider mes mesures</button>
               </div>
+            </form>
               <hr class="my-4">
               <div class="col-12">
               <ul class="nav nav-tabs">
